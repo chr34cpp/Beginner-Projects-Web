@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drum Set</title>
+    </head>
+    <body>
+        <center>Drum Set</center>
+        <style>
+            .img1{
+                position: absolute;
+                top: 20%;
+                left:38%;
+                height:100px;
+                width:100px;
+                display: inline-block;
+            }
+            body{
+                background-color:darkseagreen;
+            }
+        </style>
+        <div class="img1">
+            <img src="photo.png"/>
+        </div>
+        
+        <div class="unord">
+            <ul>
+                <li>
+                    Hi hat: q
+                </li>
+                <li>
+                    Snare : w
+                </li>
+                <li>
+                    Hi-Tom: e
+                </li>
+                <li>
+                    Mid-Tom: r
+                </li>
+                <li>
+                    Low-Tom: t
+                </li>
+                <li>
+                    Kick Drum: y
+                </li>
+                <li>
+                    Crash : u
+                </li>
+                <li>
+                    Ride : i
+                </li>
+            </ul>
+        </div>
+        <script>
+            document.addEventListener('keydown',function(event){
+                if(event.keyCode==81){
+                    var hihat= new Audio('hihat.mp3');
+                    hihat.play();
+                }
+                else if(event.keyCode==87){
+                    var snare=new Audio('snare.mp3');
+                    snare.play();
+                }
+                else if(event.keyCode==69){
+                    var hitom=new Audio('hitom.mp3');
+                    hitom.play();
+                }
+                else if(event.keyCode==82){
+                    var midtom=new Audio('midtom.mp3');
+                    midtom.play();
+                }
+                else if(event.keyCode==84){
+                    var lowtom=new Audio('lowtom.mp3');
+                    lowtom.play();
+                }
+                else if(event.keyCode==89){
+                    var kick=new Audio('bass.mp3');
+                    kick.play();
+                }
+                else if(event.keyCode==85){
+                    var crash=new Audio('crash.mp3');
+                    crash.play();
+                }
+                else if(event.keyCode==73){
+                    var ride=new Audio('ride.mp3');
+                    ride.play();
+                }
+            });
+        </script>
+    </body>
+</html>
+

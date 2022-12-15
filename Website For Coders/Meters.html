@@ -1,0 +1,143 @@
+<html>
+<meta name="viewport"content="width=device-width,initial scale==1.0">
+<style>
+body{
+	font-family: 'Arial', sans-serif;
+	color: #FFFFFF;
+}
+
+</style>
+<body style="background: linear-gradient(to bottom,#000099 0%,#ff00ff 100%);">
+	<center style="font-size: 20px;color:#34a4aa"><strong>Website For Coders</strong></center>
+	<title>Website</title>
+  	<p style="color: #1cd84e;position: absolute; top:0%; left: 3%;">Menu</p>
+  	<p style="color: #1cd8ac;position: absolute; bottom:15%; left: 0%;">Use this in order to <br>navigate through our <br>website!</p>
+  	<img src="mconv.jpg" style="position:absolute; right:40%; top:30%; width:500px; height:400px;">
+  	<img src="time.jpg" style="position:absolute; right:5%; top:30%; width:500px; height:400px;">
+	<style>
+	.wrapper{
+		text-align: left;
+	}
+	.button{
+		position: absolute;
+		top: 10%;
+		left: 0%;
+		outline: none;
+	}
+	.button2{
+		position: absolute;
+		top: 30%;
+		left: 0%;
+	}
+	.button3{
+		position: absolute;
+		top: 50%;
+		left: 0%;
+	}
+	.button4{
+		position: absolute;
+		left: 0%;
+		top: 70%;
+	}
+	.secs{
+		position: absolute;
+		right: 50%;
+		top: 7%;
+		color: red;
+	}
+	.seconds{
+		position: absolute;
+		right: 45%;
+		top: 12%;
+	}
+	.meters{
+		position: absolute;
+		right: 5%;
+		top: 4%;
+	}
+	.v1{
+		position: absolute;
+		left: 20%;
+		border-left: 6px solid #d81c80;
+		height: 745px;
+		left: 10%;
+		top: 0%;
+	}
+	</style>
+	<div class="wrapper">
+		<button class="button" > <a href="index.html" style="text-decoration:none;color:orange">Home</a> </button>
+		<button class="button2"> <a href="asci.html"style="text-decoration:none;color:orange">Asci Table</a> </button>
+		<button class="button3"> <a href="Meters.html"style="text-decoration:none;color:orange">Measure Units</a
+		> </button>
+		<button class="button4"> <a href="contact.html"style="text-decoration:none;color:orange">Contact</a
+		> </button>
+	</div>
+	<div class="v1"> </div>
+	<div class="meters">
+		<h5 style="color:red;">Meters to: </h5>
+	<select name="convert" id="conv">
+	<option value="dm">Decimeter</option>
+    <option value="cm">Centimeter</option>
+    <option value="mm">Millimeter</option>
+    <option value="in">Inches</option>
+    <option value="feet">Feet</option>
+    <option value="ml">Miles</option>
+  	</select>
+  	<input type="text" id="inp">
+  	<button onclick="solve()">Click</button>
+  	<p id="output"></p>
+	</div>
+	<h5><div class="secs"> Seconds to:</div></h5>
+	<div class="seconds">
+		<select name="convert" id="sconv">
+			<option value="min">Minutes</option>
+		    <option value="hs">Hours</option>
+		    <option value="days">Days</option>
+		    <input type="text" id="inp1">
+  			<button onclick="solve1()">Click</button>
+  			<p id="output1"></p>
+  		</select>
+	</div>
+	<script >
+  		function solve(){
+  			var s1=document.getElementById("conv").value;
+			var s2=parseInt(document.getElementById("inp").value);
+			var output=document.getElementById("output");
+			if(s1=="dm"){
+				output.innerHTML=s2*10;
+			}
+			else if(s1=="cm"){
+				output.innerHTML=s2*100;
+			}
+			else if(s1=="mm"){
+				output.innerHTML=s2*1000;
+			}
+			else if(s1=="in"){
+				output.innerHTML=s2*39.37;
+			}
+			else if(s1=="feet"){
+				output.innerHTML=s2*3.28;
+			}
+			else if(s1=="ml"){
+				output.innerHTML=s2*0.00062137;
+			}
+			
+  		}
+  		function solve1(){
+  			var s1=document.getElementById("sconv").value;
+			var s2=parseInt(document.getElementById("inp1").value);
+			var output1=document.getElementById("output1");
+			if(s1=="min"){
+				output1.innerHTML=s2/60;
+			}
+  			else if(s1=="hs"){
+				output1.innerHTML=s2/3600;
+			}
+			else if(s1=="days"){
+				output1.innerHTML=s2/86400;
+			}
+  		}
+  	</script>
+	<p style="position:absolute; bottom:0; left:50%; transform:translate(-50%,0); margin-bottom:2%;">Ⓒ Christos Psyroukis</p>
+</body>
+</html>
